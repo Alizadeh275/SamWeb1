@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href={% static "sam/styles/loginForm.css" %} type="text/css"/>
+
+<style>
+@font-face {
+  font-family: naz;
+  src:url( "fonts/BNazanin.ttf");
+}
+body:before{
+					 content: '';
+					 position: fixed;
+					 width: 100vw;
+					 height: 100vh;
+					 background-image: url({% static "sam/images/4.jpeg" %});
+					 background-position: center center;
+					 background-repeat: no-repeat;
+					 background-attachment: fixed;
+					 background-size: cover;
+					 -webkit-filter: blur(10px);
+					 -moz-filter: blur(10px);
+					 -o-filter: blur(10px);
+					 -ms-filter: blur(10px);
+					 filter: blur(10px);
+			 }
+
+
+       * {
+       	box-sizing: border-box;
+       }
+
+       body {
+       	background:linear-gradient(to right,#cc3471,#cc3471) ;
+       	background: dodgerblue;
+       }
+       .loginForm {
+       	width: 50%;
+       	background-color:white;
+       	padding: 10px;
+       	margin: 5% auto;
+       	animation:show .4s;
+       	animation-fill-mode: forwards;
+       	box-shadow: -1px 4px 18px rgba(0,0,0,.4);
+       	border: 2px solid chartreuse;
+       	overflow-y: hidden;
+
+       }
+
+       @keyframes show {
+       	0%{width: 0;opacity: 0;}
+       	100%{width: 50%;opacity: 1;}
+       }
+
+       .email,.password {
+       	width: 95%;
+       	margin:2% auto;
+       }
+
+       h2 {
+       	text-align: center;
+       	color: lime;
+       	margin:2% auto;
+       	margin-bottom: 4%;
+       	font-family:naz,Segoe Marker;
+       	animation:rot .4s ;
+       	animation-iteration-count: 2;
+       	animation-delay: 2s;
+       }
+
+       @keyframes rot {
+       	0%{transform: rotate(0deg);}
+       	25% {transform: rotate(-5deg);}
+       	50%{transform: rotate(0deg);}
+       	75%{transform: rotate(5deg);}
+       		100%{transform: rotate(0deg);}
+       }
+       .email input,.password input {
+       	display: inline-block;
+       	padding:8px 15px;
+       	width: 100%;
+       	margin: auto;
+       	border: none;
+       	border: 2px solid #c4c4c4;
+       	border-right: 4px solid lime;
+       	outline: none;
+       	font-family: naz;
+       	direction: rtl;
+       	font-size: 20px;
+       	color: #cc3471;
+
+
+
+       }
+       ::placeholder {
+       	color: lime;
+       }
+       .email input:focus,.password input:focus {
+
+       	border: 2px solid lime;
+       	/*box-shadow: 0 3px 18px 0 gray;*/
+
+       }
+
+       .loginbtn {
+       	width: 12%;
+       	margin: 2% auto;
+       	margin-bottom: 1%;
+       	border-radius: 5px;
+
+       }
+       .loginbtn button {
+       	display: inline-block;
+       	padding: 5px 10px;
+       	background-color: white;
+       	color: dodgerblue;
+       	border: 2px solid #cc3471;
+       	border: 2px solid dodgerblue;
+       	width: 100%;
+       	border-radius: 5px;
+       	outline: none;
+       	cursor: pointer;
+       	font-family: naz;
+       	font-size:1.7vw;
+       	text-align: center;
+
+
+       }
+
+       .loginbtn button i{
+       	font-size: 1vw;
+       	font-weight: none;
+       }
+
+       .loginbtn button:hover,.loginbtn button:focus {
+       	background-color: #cc3471;
+       	background-color: dodgerblue;
+       	color:white ;
+
+       	/*box-shadow: -2px 3px 18px 0 gold,4px -2px 18px 0 gold,-4px 6px 18px 0 gold;*/
+       }
+
+       .registerLink {
+       	width: 10%;
+       	margin:auto;
+       	font-size:1.5vw;
+       	text-align: center;
+       	font-family: naz;
+       }
+       .registerLink a {
+       	text-decoration: none;
+       	color: dodgerblue;
+       	font-family: inherit;
+       }
+
+
+</style>
+
+<script type="text/javascript">
+	function submit() {
+		// body...
+		/*var in1,in2;
+		in1=document.getElementById("username");
+		in2=document.getElementById("pass");
+		if(in1.value==""){
+
+			in1.style.borderBottom="2px solid red";
+
+		}if(in2.value==""){
+			in2.style.borderBottom="2px solid red";
+		}*/
+	}
+</script>
+
+</head>
+<body>
+
+<div class="loginForm">
+
+		<h2>!خوش آمدید</h2>
+
+	<div class="email">
+		<input type="text" id="username" placeholder="نام کاربری" required="">
+	</div>
+	<div class="password">
+		<input type="password" id="pass" placeholder="رمز عبور"  required="">
+	</div>
+	<div class="loginbtn">
+		<button onclick="submit()"><i class="fa fa-arrow-left"></i>
+		ورود</button>
+	</div>
+
+		<p class="registerLink">یا <a href="RegisterForm.htm">ثبت نام</a></p>
+
+</div>
+
+</body>
+</html>
