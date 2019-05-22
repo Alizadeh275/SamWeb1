@@ -68,7 +68,7 @@ i.active{
 }
 
 .flex-container {
-	display: none;
+	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content:center;
@@ -577,11 +577,7 @@ span.onclick=function () {
 		// body...
 			document.getElementsByClassName("loader")[0].style.display =
 			'none';
-			document.getElementsByClassName("flex-container")[0].style.display =
-			'flex';
-setTimeout(function(){}, 1000);
-			document.getElementsByClassName("flex-container")[0].style.animationPlayState =
-			'running';
+
 	}
 
 </script>
