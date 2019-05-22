@@ -68,7 +68,7 @@ i.active{
 }
 
 .flex-container {
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content:center;
@@ -78,7 +78,7 @@ i.active{
 	transform: translateX(-100px);
 	animation: anim1 2s;
 	animation-fill-mode: forwards;
-  animation-play-state: running;
+  animation-play-state: paused;
 
 
 }
@@ -577,7 +577,11 @@ span.onclick=function () {
 		// body...
 			document.getElementsByClassName("loader")[0].style.display =
 			'none';
-
+			document.getElementsByClassName("flex-container")[0].style.display =
+			'flex';
+setTimeout(function(){}, 1000);
+			document.getElementsByClassName("flex-container")[0].style.animationPlayState =
+			'running';
 	}
 
 </script>
